@@ -7,6 +7,7 @@ Se nome e idade forem digitados:
         Seu nome é {nome}
         Seu nome invertido é {nome invertido}
         Se nome contém (ou não) espaços
+        Seu nome contém quantas letras
         A primeira letra do seu nome é {letra}
         A última letra do seu nome é {letra}
 Se nada for digitado em nome ou idade:
