@@ -5,7 +5,9 @@ enumerate - enumera iteráveis (índices)
 lista = ['Evandro', 'Liliana', 'Edivaldo']
 lista.append('João')
 
-lista_enumerada = enumerate(lista)
+lista_enumerada = list(enumerate(lista))
 
-for item in lista_enumerada:
-    print(item)
+print(lista_enumerada)
+
+# for item in lista_enumerada:
+#     print(item)
