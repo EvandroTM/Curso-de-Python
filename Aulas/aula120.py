@@ -13,18 +13,17 @@
 # CriarBaseDeDados  # PascalCase
 
 class Pessoa:
-    ...
+    def __init__(self, nome, sobrenome):
+        self.nome = nome
+        self.sobrenome = sobrenome
 
-p1 = Pessoa()
-p1.nome = 'Evandro'
-p1.sobrenome = 'Moura'
-p1.idade = 34
+p1 = Pessoa('Evandro', 'Moura')
+# p1.nome = 'Evandro'
+# p1.sobrenome = 'Moura'
 
-p2 = Pessoa()
-p2.nome = 'teste'
-p2.sobrenome = 'teste 2'
-p2.idade = 34
-
+p2 = Pessoa('Nome 2', 'sobrenome 2')
+# p2.nome = 'teste'
+# p2.sobrenome = 'teste 2'
 
 print(p1.nome)
 print(p1.sobrenome)
