@@ -17,13 +17,30 @@ class Foo:
     def __init__(self):
         self.public = 'Isso é público.'
         self._protected = 'Isso é protegido.'
+        self.__private = 'Isso é privado.'
+
+        # self._metodo_protected()
 
 
     def metodo_publico(self):
-        return 'metodo_publico.'
+        # self._metodo_protected()
+        # print(self._protected)
+        print(self.__private)
+        self.__metodo_private()
+        return 'metodo_publico'
+    
+    def _metodo_protected(self):
+        print('_metodo_protected')
+        return '_metodo_protected'
+    
+    def __metodo_private(self):
+        print('__metodo_private')
+        return '__metodo_private'
 
         
 f = Foo()
-print(f._protected)
+# print(f._protected)
+# print(f._metodo_protected())
 # print(f.public)
 # print(f.metodo_publico)
+print(f.metodo_publico())
