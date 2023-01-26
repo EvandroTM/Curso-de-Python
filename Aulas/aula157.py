@@ -15,11 +15,37 @@
 # chave = Classe.chave.name
 # valor = Classe.chave.value
 
+import enum
+
+# Direcoes = enum.Enum('Direcoes', ['ESQUERDA', 'DIREITA'])
+
+class Direcoes(enum.Enum):
+    ESQUERDA = enum.auto()
+    DIREITA = enum.auto() 
+    ACIMA = enum.auto() 
+    ABAIXO = enum.auto() 
+
+print(Direcoes(1), Direcoes['ESQUERDA'], Direcoes.ESQUERDA)
+print(Direcoes(1).name, Direcoes.ESQUERDA.value)
+
 def mover(direcao):
-    print(f'Movendo para {direcao}')
+    if not isinstance(direcao, Direcoes):
+        raise ValueError('Direção não encontrada.')
+
+    print(f'Movendo para {direcao.name} ({direcao.value})')
 
 
-mover('esquerda')
-mover('direita')
-mover('acima')
-mover('abaixo')
+mover(Direcoes.ESQUERDA)
+mover(Direcoes.DIREITA)
+mover(Direcoes.ACIMA)
+mover(Direcoes.ABAIXO)
+
+
+# mover('esquerda')
+# mover('direita')
+# mover('lado')
+# mover('acima')
+# mover('abaixo')
+
+507
+7757
